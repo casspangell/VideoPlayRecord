@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		897D933E18BC342900059C02 /* CPRecordTakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */; };
 		89A94BF218B801CF009CE929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF118B801CF009CE929 /* Foundation.framework */; };
 		89A94BF418B801CF009CE929 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF318B801CF009CE929 /* CoreGraphics.framework */; };
 		89A94BF618B801CF009CE929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF518B801CF009CE929 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		897D933C18BC342900059C02 /* CPRecordTakePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPRecordTakePictureViewController.h; sourceTree = "<group>"; };
+		897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPRecordTakePictureViewController.m; sourceTree = "<group>"; };
 		89A94BEE18B801CF009CE929 /* VideoPlayRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A94BF118B801CF009CE929 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89A94BF318B801CF009CE929 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +151,8 @@
 				89A94C0018B801CF009CE929 /* CPAppDelegate.h */,
 				89A94C0118B801CF009CE929 /* CPAppDelegate.m */,
 				89A94C0318B801CF009CE929 /* Main.storyboard */,
+				897D933C18BC342900059C02 /* CPRecordTakePictureViewController.h */,
+				897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */,
 				89F9E34418B8064500A7BD23 /* CPPlayVideoViewController.h */,
 				89F9E34518B8064500A7BD23 /* CPPlayVideoViewController.m */,
 				89F9E34718B8065A00A7BD23 /* CPRecordVideoViewController.h */,
@@ -293,6 +298,7 @@
 				89F9E34918B8065A00A7BD23 /* CPRecordVideoViewController.m in Sources */,
 				89F9E34618B8064500A7BD23 /* CPPlayVideoViewController.m in Sources */,
 				89A94C0218B801CF009CE929 /* CPAppDelegate.m in Sources */,
+				897D933E18BC342900059C02 /* CPRecordTakePictureViewController.m in Sources */,
 				89F9E34C18B8066C00A7BD23 /* CPMergeVideoViewController.m in Sources */,
 				89A94C0818B801CF009CE929 /* CPViewController.m in Sources */,
 			);

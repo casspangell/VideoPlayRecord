@@ -47,6 +47,16 @@
                                     <segue destination="13B-hK-lUv" kind="push" id="ncj-q8-mUQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PN-iZ-pRa">
+                                <rect key="frame" x="70" y="315" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Record Video Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iHa-Hp-zTG" kind="push" id="J89-KL-voA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -73,6 +83,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaL-XX-Ovr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44" y="719"/>
+        </scene>
+        <!--Record Take Picture View Controller-->
+        <scene sceneID="K79-zU-yVh">
+            <objects>
+                <viewController id="iHa-Hp-zTG" customClass="CPRecordTakePictureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HwV-UT-uOG"/>
+                        <viewControllerLayoutGuide type="bottom" id="22n-WM-afP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0er-oP-PeN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-vk-Ge2">
+                                <rect key="frame" x="107" y="176" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Record Video2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAndPlayPressed:" destination="iHa-Hp-zTG" eventType="touchUpInside" id="5gV-fr-wBO"/>
+                                    <action selector="recordAndPlayPressed:" destination="4k5-gF-62B" eventType="touchUpInside" id="aHg-MV-HF0"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Allows user to open the camera and record video, use video or retake video." translatesAutoresizingMaskIntoConstraints="NO" id="7OF-c7-W2V">
+                                <rect key="frame" x="40" y="247" width="240" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n1q-31-6SQ"/>
+                    <connections>
+                        <outlet property="recordAndPlay" destination="iYn-vk-Ge2" id="2SJ-mp-NHV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xib-z2-ndk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="1412"/>
         </scene>
         <!--Record Video View Controller-->
         <scene sceneID="BaE-6g-bZw">
