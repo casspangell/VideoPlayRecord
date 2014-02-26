@@ -7,6 +7,9 @@
 //
 
 #import "CPRecordTakePictureViewController.h"
+#import "CPTakePictureButton.h"
+#import <AVFoundation/AVCaptureSession.h>
+#import <AVFoundation/AVCaptureInput.h>
 
 @interface CPRecordTakePictureViewController ()
 
@@ -27,11 +30,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
 }
 
 - (IBAction)recordAndPlayPressed:(id)sender {
     [self startCameraControllerFromViewController:self usingDelegate:self];
 }
+
 
 -(BOOL) startCameraControllerFromViewController:(UIViewController *)controller usingDelegate:(id)delegate{
     // Validation
@@ -40,20 +45,30 @@
         return NO;
     }
     
+    //create an overlay view instance
+    CPTakePictureButton *takePicture = [[CPTakePictureButton alloc]
+                            initWithFrame:CGRectMake(0, self.view.frame.size.height-120, self.view.frame.size.width, 44)];
+    
+    [takePicture addTarget:self action:@selector(takePicturePressed:) forControlEvents:UIControlEventTouchUpInside];
+    
     // Get the image picker
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
     cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     //Display control to allow user to select movie capture
     cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString*)kUTTypeMovie, nil];
+    //cameraUI.videoMaximumDuration = 10; //10 second interval max
     
     // Hides controls for moving or scaling or trimming
     cameraUI.allowsEditing = NO;
     cameraUI.delegate = delegate;
     
+    //set our custom overlay view
+    cameraUI.cameraOverlayView = takePicture;
+    
     // Display image picker
     [controller presentViewController:cameraUI animated:YES completion:nil];
-    
+   
     return  YES;
     
 }
@@ -87,6 +102,21 @@
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
+}
+
+-(void)takePicturePressed:(UIButton*)sender {
+    //  Init the capture session
+  /*  AVCaptureSession *newCaptureSession = [[AVCaptureSession alloc] init];
+    newCaptureSession.sessionPreset = AVCaptureSessionPresetPhoto;
+    
+    // Setup the still image output
+    AVCaptureStillImageOutput *newStillImageOutput =
+    
+    [[AVCaptureStillImageOutput alloc] init];
+    [newStillImageOutput setOutputSettings:[[NSDictionary alloc]
+                                            initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey,nil]];
+   */
+
 }
 
 - (void)didReceiveMemoryWarning

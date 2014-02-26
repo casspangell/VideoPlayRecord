@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		897D933E18BC342900059C02 /* CPRecordTakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */; };
+		897D934B18BC418100059C02 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 897D934A18BC418100059C02 /* camera.png */; };
+		897D934E18BC49B200059C02 /* CPTakePictureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 897D934D18BC49B200059C02 /* CPTakePictureButton.m */; };
+		897D935718BD74A100059C02 /* CPAudioWithStillImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897D935618BD74A100059C02 /* CPAudioWithStillImageViewController.m */; };
 		89A94BF218B801CF009CE929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF118B801CF009CE929 /* Foundation.framework */; };
 		89A94BF418B801CF009CE929 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF318B801CF009CE929 /* CoreGraphics.framework */; };
 		89A94BF618B801CF009CE929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF518B801CF009CE929 /* UIKit.framework */; };
@@ -46,6 +49,11 @@
 /* Begin PBXFileReference section */
 		897D933C18BC342900059C02 /* CPRecordTakePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPRecordTakePictureViewController.h; sourceTree = "<group>"; };
 		897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPRecordTakePictureViewController.m; sourceTree = "<group>"; };
+		897D934A18BC418100059C02 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		897D934C18BC49B200059C02 /* CPTakePictureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTakePictureButton.h; sourceTree = "<group>"; };
+		897D934D18BC49B200059C02 /* CPTakePictureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPTakePictureButton.m; sourceTree = "<group>"; };
+		897D935518BD74A100059C02 /* CPAudioWithStillImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAudioWithStillImageViewController.h; path = ../CPAudioWithStillImageViewController.h; sourceTree = "<group>"; };
+		897D935618BD74A100059C02 /* CPAudioWithStillImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAudioWithStillImageViewController.m; path = ../CPAudioWithStillImageViewController.m; sourceTree = "<group>"; };
 		89A94BEE18B801CF009CE929 /* VideoPlayRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A94BF118B801CF009CE929 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89A94BF318B801CF009CE929 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,11 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F9E33B18B802B500A7BD23 /* AVFoundation.framework in Frameworks */,
 				89F9E34318B802CE00A7BD23 /* QuartzCore.framework in Frameworks */,
 				89F9E34118B802C700A7BD23 /* MobileCoreServices.framework in Frameworks */,
 				89F9E33F18B802C100A7BD23 /* MediaPlayer.framework in Frameworks */,
 				89F9E33D18B802BB00A7BD23 /* CoreMedia.framework in Frameworks */,
-				89F9E33B18B802B500A7BD23 /* AVFoundation.framework in Frameworks */,
 				89F9E33918B802AD00A7BD23 /* AssetsLibrary.framework in Frameworks */,
 				89A94BF418B801CF009CE929 /* CoreGraphics.framework in Frameworks */,
 				89A94BF618B801CF009CE929 /* UIKit.framework in Frameworks */,
@@ -109,10 +117,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		897D934918BC416D00059C02 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				897D934A18BC418100059C02 /* camera.png */,
+			);
+			name = Assets;
+			path = VideoPlayRecord;
+			sourceTree = "<group>";
+		};
 		89A94BE518B801CE009CE929 = {
 			isa = PBXGroup;
 			children = (
 				89A94BF718B801CF009CE929 /* VideoPlayRecord */,
+				897D934918BC416D00059C02 /* Assets */,
 				89A94C1618B801CF009CE929 /* VideoPlayRecordTests */,
 				89A94BF018B801CF009CE929 /* Frameworks */,
 				89A94BEF18B801CF009CE929 /* Products */,
@@ -151,8 +169,12 @@
 				89A94C0018B801CF009CE929 /* CPAppDelegate.h */,
 				89A94C0118B801CF009CE929 /* CPAppDelegate.m */,
 				89A94C0318B801CF009CE929 /* Main.storyboard */,
+				897D935518BD74A100059C02 /* CPAudioWithStillImageViewController.h */,
+				897D935618BD74A100059C02 /* CPAudioWithStillImageViewController.m */,
 				897D933C18BC342900059C02 /* CPRecordTakePictureViewController.h */,
 				897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */,
+				897D934C18BC49B200059C02 /* CPTakePictureButton.h */,
+				897D934D18BC49B200059C02 /* CPTakePictureButton.m */,
 				89F9E34418B8064500A7BD23 /* CPPlayVideoViewController.h */,
 				89F9E34518B8064500A7BD23 /* CPPlayVideoViewController.m */,
 				89F9E34718B8065A00A7BD23 /* CPRecordVideoViewController.h */,
@@ -276,6 +298,7 @@
 				89A94C0A18B801CF009CE929 /* Images.xcassets in Resources */,
 				89A94BFC18B801CF009CE929 /* InfoPlist.strings in Resources */,
 				89A94C0518B801CF009CE929 /* Main.storyboard in Resources */,
+				897D934B18BC418100059C02 /* camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +319,9 @@
 			files = (
 				89A94BFE18B801CF009CE929 /* main.m in Sources */,
 				89F9E34918B8065A00A7BD23 /* CPRecordVideoViewController.m in Sources */,
+				897D934E18BC49B200059C02 /* CPTakePictureButton.m in Sources */,
 				89F9E34618B8064500A7BD23 /* CPPlayVideoViewController.m in Sources */,
+				897D935718BD74A100059C02 /* CPAudioWithStillImageViewController.m in Sources */,
 				89A94C0218B801CF009CE929 /* CPAppDelegate.m in Sources */,
 				897D933E18BC342900059C02 /* CPRecordTakePictureViewController.m in Sources */,
 				89F9E34C18B8066C00A7BD23 /* CPMergeVideoViewController.m in Sources */,
