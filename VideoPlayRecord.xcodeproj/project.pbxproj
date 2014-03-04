@@ -25,6 +25,7 @@
 		89A94C1318B801CF009CE929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A94BF518B801CF009CE929 /* UIKit.framework */; };
 		89A94C1B18B801CF009CE929 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89A94C1918B801CF009CE929 /* InfoPlist.strings */; };
 		89A94C1D18B801CF009CE929 /* VideoPlayRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A94C1C18B801CF009CE929 /* VideoPlayRecordTests.m */; };
+		89F1045018C4EF7600629342 /* CPRecordAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F1044F18C4EF7600629342 /* CPRecordAudioViewController.m */; };
 		89F9E33918B802AD00A7BD23 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F9E33818B802AD00A7BD23 /* AssetsLibrary.framework */; };
 		89F9E33B18B802B500A7BD23 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F9E33A18B802B500A7BD23 /* AVFoundation.framework */; };
 		89F9E33D18B802BB00A7BD23 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F9E33C18B802BB00A7BD23 /* CoreMedia.framework */; };
@@ -73,6 +74,8 @@
 		89A94C1818B801CF009CE929 /* VideoPlayRecordTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VideoPlayRecordTests-Info.plist"; sourceTree = "<group>"; };
 		89A94C1A18B801CF009CE929 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89A94C1C18B801CF009CE929 /* VideoPlayRecordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayRecordTests.m; sourceTree = "<group>"; };
+		89F1044E18C4EF7600629342 /* CPRecordAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPRecordAudioViewController.h; sourceTree = "<group>"; };
+		89F1044F18C4EF7600629342 /* CPRecordAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPRecordAudioViewController.m; sourceTree = "<group>"; };
 		89F9E33818B802AD00A7BD23 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		89F9E33A18B802B500A7BD23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		89F9E33C18B802BB00A7BD23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -169,20 +172,14 @@
 				89A94C0018B801CF009CE929 /* CPAppDelegate.h */,
 				89A94C0118B801CF009CE929 /* CPAppDelegate.m */,
 				89A94C0318B801CF009CE929 /* Main.storyboard */,
-				897D935518BD74A100059C02 /* CPAudioWithStillImageViewController.h */,
-				897D935618BD74A100059C02 /* CPAudioWithStillImageViewController.m */,
-				897D933C18BC342900059C02 /* CPRecordTakePictureViewController.h */,
-				897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */,
-				897D934C18BC49B200059C02 /* CPTakePictureButton.h */,
-				897D934D18BC49B200059C02 /* CPTakePictureButton.m */,
-				89F9E34418B8064500A7BD23 /* CPPlayVideoViewController.h */,
-				89F9E34518B8064500A7BD23 /* CPPlayVideoViewController.m */,
-				89F9E34718B8065A00A7BD23 /* CPRecordVideoViewController.h */,
-				89F9E34818B8065A00A7BD23 /* CPRecordVideoViewController.m */,
-				89F9E34A18B8066C00A7BD23 /* CPMergeVideoViewController.h */,
-				89F9E34B18B8066C00A7BD23 /* CPMergeVideoViewController.m */,
 				89A94C0618B801CF009CE929 /* CPViewController.h */,
 				89A94C0718B801CF009CE929 /* CPViewController.m */,
+				89F1045118C4EF7900629342 /* Record Audio */,
+				89F1044D18C4EF4800629342 /* Audio with Still Image */,
+				89F1044C18C4EF2B00629342 /* Record Take Picture */,
+				89F1044B18C4EF2100629342 /* Play Video */,
+				89F1044A18C4EF1200629342 /* Record Video */,
+				89F1044918C4EEFF00629342 /* Merge Video */,
 				89A94C0918B801CF009CE929 /* Images.xcassets */,
 				89A94BF818B801CF009CE929 /* Supporting Files */,
 			);
@@ -216,6 +213,63 @@
 				89A94C1918B801CF009CE929 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89F1044918C4EEFF00629342 /* Merge Video */ = {
+			isa = PBXGroup;
+			children = (
+				89F9E34A18B8066C00A7BD23 /* CPMergeVideoViewController.h */,
+				89F9E34B18B8066C00A7BD23 /* CPMergeVideoViewController.m */,
+			);
+			name = "Merge Video";
+			sourceTree = "<group>";
+		};
+		89F1044A18C4EF1200629342 /* Record Video */ = {
+			isa = PBXGroup;
+			children = (
+				89F9E34718B8065A00A7BD23 /* CPRecordVideoViewController.h */,
+				89F9E34818B8065A00A7BD23 /* CPRecordVideoViewController.m */,
+			);
+			name = "Record Video";
+			sourceTree = "<group>";
+		};
+		89F1044B18C4EF2100629342 /* Play Video */ = {
+			isa = PBXGroup;
+			children = (
+				89F9E34418B8064500A7BD23 /* CPPlayVideoViewController.h */,
+				89F9E34518B8064500A7BD23 /* CPPlayVideoViewController.m */,
+			);
+			name = "Play Video";
+			sourceTree = "<group>";
+		};
+		89F1044C18C4EF2B00629342 /* Record Take Picture */ = {
+			isa = PBXGroup;
+			children = (
+				897D933C18BC342900059C02 /* CPRecordTakePictureViewController.h */,
+				897D933D18BC342900059C02 /* CPRecordTakePictureViewController.m */,
+				897D934C18BC49B200059C02 /* CPTakePictureButton.h */,
+				897D934D18BC49B200059C02 /* CPTakePictureButton.m */,
+			);
+			name = "Record Take Picture";
+			sourceTree = "<group>";
+		};
+		89F1044D18C4EF4800629342 /* Audio with Still Image */ = {
+			isa = PBXGroup;
+			children = (
+				897D935518BD74A100059C02 /* CPAudioWithStillImageViewController.h */,
+				897D935618BD74A100059C02 /* CPAudioWithStillImageViewController.m */,
+			);
+			name = "Audio with Still Image";
+			sourceTree = "<group>";
+		};
+		89F1045118C4EF7900629342 /* Record Audio */ = {
+			isa = PBXGroup;
+			children = (
+				89F1044E18C4EF7600629342 /* CPRecordAudioViewController.h */,
+				89F1044F18C4EF7600629342 /* CPRecordAudioViewController.m */,
+			);
+			name = "Record Audio";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +376,7 @@
 				897D934E18BC49B200059C02 /* CPTakePictureButton.m in Sources */,
 				89F9E34618B8064500A7BD23 /* CPPlayVideoViewController.m in Sources */,
 				897D935718BD74A100059C02 /* CPAudioWithStillImageViewController.m in Sources */,
+				89F1045018C4EF7600629342 /* CPRecordAudioViewController.m in Sources */,
 				89A94C0218B801CF009CE929 /* CPAppDelegate.m in Sources */,
 				897D933E18BC342900059C02 /* CPRecordTakePictureViewController.m in Sources */,
 				89F9E34C18B8066C00A7BD23 /* CPMergeVideoViewController.m in Sources */,
